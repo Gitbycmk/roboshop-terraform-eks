@@ -14,6 +14,7 @@ terraform {
   }
 }
 
+# Region for Provider and Infra
 provider "aws" {
   region = "us-east-1"
 }
