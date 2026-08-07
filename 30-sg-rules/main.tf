@@ -425,7 +425,7 @@ resource "aws_security_group_rule" "eks_control_plane_eks_node" {
 resource "aws_security_group_rule" "eks_node_vpc" {
   type              = "ingress"
   security_group_id = local.eks_node_sg_id
-  cidr_blocks = ["10.0.0.0/16"]
+  cidr_blocks       = ["10.0.0.0/16"]
   from_port         = 0
   protocol          = "-1"
   to_port           = 0
