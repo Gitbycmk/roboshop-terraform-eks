@@ -54,9 +54,9 @@ module "eks" {
       #   }
       # }
 
-      labels = {
-        nodegroup = "blue"
-      }
+      # labels = {
+      #   nodegroup = "blue"
+      # }
     }
 
     green = {
