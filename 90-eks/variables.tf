@@ -11,7 +11,7 @@ variable "zone_id" {
 }
 
 variable "domain_name" {
-    default = "dawscgght.fun"
+    default = "dawscggt.fun"
 }
 
 variable "eks_version" {
