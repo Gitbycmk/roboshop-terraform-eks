@@ -7,7 +7,7 @@ variable "environment" {
 }
 
 variable "zone_id" {
-    default = "Z03275711LSDTWJWOX2S7v"
+    default = "Z03275711LSDTWJWOX2S7"
 }
 
 variable "domain_name" {
