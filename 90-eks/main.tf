@@ -82,17 +82,17 @@ module "eks" {
       #   }
       # }
 
-  #     labels = {
-  #       nodegroup = "green"
-  #     }
-  #   }
-  # }
+      labels = {
+        nodegroup = "green"
+      }
+    }
+  }
 
-  # tags = merge(
-  #   local.common_tags,
-  #   {
-  #       Name = local.common_name_suffix
-  #   }
-  # )
+  tags = merge(
+    local.common_tags,
+    {
+        Name = local.common_name_suffix
+    }
+  )
   
 }
