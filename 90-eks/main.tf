@@ -6,17 +6,17 @@ module "eks" {
   # kubernetes_version = "1.33"
   kubernetes_version = var.eks_version
 
-  addons = {
-    coredns                = {}
-    eks-pod-identity-agent = {
-      before_compute = true
-    }
-    kube-proxy             = {}
-    vpc-cni                = {
-      before_compute = true
-    }
-    metrics-server = {}
-  }
+  # addons = {
+  #   coredns                = {}
+  #   eks-pod-identity-agent = {
+  #     before_compute = true
+  #   }
+  #   kube-proxy             = {}
+  #   vpc-cni                = {
+  #     before_compute = true
+  #   }
+  #   metrics-server = {}
+  # }
 
   endpoint_public_access = false
   enable_cluster_creator_admin_permissions = true
