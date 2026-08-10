@@ -32,9 +32,9 @@ module "eks" {
   # EKS Managed Node Group(s)
   eks_managed_node_groups = {
     blue = {
-      create = var.enable_blue
+      # create = var.enable_blue
       ami_type       = "AL2023_x86_64_STANDARD"
-      kubernetes_version = var.eks_nodegroup_blue_version
+      # kubernetes_version = var.eks_nodegroup_blue_version
       instance_types = ["t3.micro"]
       iam_role_additional_policies  = {
         amazonEFS = "arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy"
@@ -46,13 +46,13 @@ module "eks" {
       max_size     = 10
       desired_size = 2
 
-      # taints = {
-      #   upgrade = {
-      #     key = "upgrade"
-      #     value = "true"
-      #     effect = "NO_SCHEDULE"
-      #   }
-      # }
+      taints = {
+        upgrade = {
+          key = "upgrade"
+          value = "true"
+          effect = "NO_SCHEDULE"
+        }
+      }
 
       labels = {
         nodegroup = "blue"
@@ -60,9 +60,9 @@ module "eks" {
     }
 
     green = {
-      create = var.enable_green
+      # create = var.enable_green
       ami_type       = "AL2023_x86_64_STANDARD"
-      kubernetes_version = var.eks_nodegroup_green_version
+      # kubernetes_version = var.eks_nodegroup_green_version
       instance_types = ["t3.micro"]
       iam_role_additional_policies  = {
         amazonEFS = "arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy"
