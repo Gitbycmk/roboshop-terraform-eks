@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "cmk-remote-state-dev-bucket-12" 
+    bucket = "cmk-remote-state-dev-bucket-13" 
     key = "roboshop-eks-bastion"
     region = "us-east-1"
     use_lockfile = true
